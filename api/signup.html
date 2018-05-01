@@ -1,0 +1,67 @@
+
+<form action='http://localhost:3000/empl'  method='post'  id="loginForm" name="loginForm">
+<table border="8" align="center" cellspacing="8" cellpadding="8">
+	<tr>
+		<th colspan="2" align="center">REGISTRATION FORM</th>
+	</tr>
+	<tr>
+		<th>First Name:</th>
+		<td><input type= 'text' name='first_name' required ></td>
+	</tr>
+  <tr>
+	<th>Last Name:</th>
+	<td><input type='text' name='last_name' required ></td>
+  </tr>
+  <tr>
+	<th>Password:</th>
+	<td><input type='password' name='password' id="password" required ></td>
+  </tr>
+  <tr>
+	<th>Confirm Password:</th>
+	<td><input type='password' id="confirm" name='confirm' required ></td>
+  </tr>
+  <tr>
+	<th>Email:</th>
+	<td><input type='email' name='email' required ></td>
+  </tr>	
+  <tr>
+	<th>Pastal Code:</th>
+	<td><input type='text' name='pastal_code' required ></td>
+  </tr>	
+  <tr>
+	<th>Mobile:</th>
+	<td><input type='text' name='mobile_no' maxlength="10" required ></td>
+  </tr>	
+  <tr>
+	<td colspan="2" align="center">
+		<input type='submit' class="enterform" value='submit' onClick="validatePassword();">
+	</td>
+  </tr>		
+</table>
+</form>
+
+<script type="text/javascript" src="http://www.technicalkeeda.com/js/javascripts/plugin/jquery.js"></script>
+ <script type="text/javascript" src="http://www.technicalkeeda.com/js/javascripts/plugin/jquery.validate.js"></script>
+
+
+
+<script>
+function validatePassword() {
+            var validator = $("#loginForm").validate({
+                rules: {
+                    password: "required",
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                },
+                messages: {
+                    password: " Enter Password",
+                    confirm: " Password not matched."
+                }
+            });
+            if (validator.form()) {
+               
+            }
+        }
+     
+</script>

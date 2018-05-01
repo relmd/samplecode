@@ -1,0 +1,19 @@
+{
+  "name": "getjobboards",
+  "version": "1.0.0",
+  "description": "Fetch Jobboards from database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "getjobboards"
+  },
+  "author": "sarna",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "mysql": "^2.15.0"
+  }
+}
